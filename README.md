@@ -40,8 +40,22 @@ spring boot form security with role based authorization
 
 ```
 
+* The annotation on configuration class enables spring security and Pre post authorization features
+```
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+```
+* Use Preauthorize annotation on API to to give authorization for a perticular role 
+```
+  @RequestMapping(value = "/userapi", method = RequestMethod.GET)
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public String getUserApi() {
+```
+
 ### Demo
-* There are 3 GET api's wirrten in SecurityController class to verify authentication and authorization.
+* There are 4 GET api's wirrten in SecurityController class to verify authentication and authorization.
     * /user 
       * Returns authticated user(called as principal in spring security context)
       * On directly accessing this api without authenticating user will be redirected to spring default login page.
