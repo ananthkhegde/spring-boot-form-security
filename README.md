@@ -42,15 +42,15 @@ spring boot form security with role based authorization
 
 ### Demo
 * There are 3 GET api's wirrten in SecurityController class to verify authentication and authorization.
-    ** /user 
+    * /user 
      Returns authticated user(called as principal in spring security context)
-    ** /securedapi
+    * /securedapi
      This api can be accessed only by authenticated user.
      On directly accessing this api without authenticating user will be redirected to spring default login page.
-    ** /adminapi
+    * /adminapi
      This api can be accessed by the user with admin role
      If a user without admin role tries to access this url, 403 Unauthorized code will be returned.
-    ** /userapi
+    * /userapi
      This api can be accessed by the user with user role
      If a user without user role tries to access this url, 403 Unauthorized code will be returned.
      
