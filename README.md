@@ -41,7 +41,7 @@ spring boot form security with role based authorization
 ```
 
 ### Demo
-* There are 3 GET api's wirrten in SecurityController class to verify authentication and authorization
+* There are 3 GET api's wirrten in SecurityController class to verify authentication and authorization.
   ** /user 
      Returns authticated user(called as principal in spring security context)
   ** /securedapi
