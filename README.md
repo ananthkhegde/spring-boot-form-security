@@ -55,7 +55,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ### Demo
-* There are 4 GET api's wirrten in SecurityController class to verify authentication and authorization.
+* There are 4 GET api's wirrten in SecurityController class to verify authentication and authorization. 
+  By default this project listens to 8080 port. All this urls can be tested in browsers as it is GET request
     * /user 
       * Returns authticated user(called as principal in spring security context)
       * On directly accessing this api without authenticating user will be redirected to spring default login page.
